@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>HACKS-RAMS2026</title>
+  <meta name="description"
+    content="Joint Workshop on Human-Aware Cybersecurity and Risk Analysis in AI-Driven Systems (HACKS-RAMS2026)">
+  <meta name="keywords"
+    content="AI risk, cybersecurity, human-aware AI, social cyber attacks, workshop, ECML PKDD 2026">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Rubik:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #7c101c;
+      --accent-2: #c53030;
+      --dark: #0f172a;
+      --muted: #64748b;
+      --bg-light: #f8fafc;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #1e293b;
+      scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .sitename {
+      font-family: 'Rubik', sans-serif;
+    }
+
+    .header {
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      padding: 14px 0;
+    }
+
+    .logo {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      margin: 0;
+      color: #fff;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .navmenu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navmenu a:hover {
+      color: #fca5a5;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: #fff;
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.45)),
+        url("assets/img/background.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero .badge-workshop {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      max-width: 900px;
+      margin: 0 auto 28px;
+      color: #e2e8f0;
+    }
+
+    .event-details {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 12px 18px;
+      border-radius: 14px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .light-background {
+      background: var(--bg-light);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+
+    .card-box,
+    .speaker-card,
+    .stat-card,
+    .schedule-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+      padding: 24px;
+      height: 100%;
+    }
+
+    .lead {
+      color: #334155;
+    }
+
+    .topics-list li {
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .pc-list {
+      columns: 2;
+      column-gap: 60px;
+    }
+
+    .papers-list li {
+      margin-bottom: 10px;
+    }
+
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #fee2e2;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .speaker-profile img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .speaker-info h4 {
+      margin-bottom: 6px;
+    }
+
+    .speaker-position,
+    .speaker-org,
+    .speaker-email {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .schedule-card h4 {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .schedule-time {
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #cbd5e1;
+      padding: 26px 0;
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    @media (max-width: 991px) {
+      .navmenu ul {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .header .container-xl {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .navmenu ul {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">HACKS-RAMS2026</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#organizers">Organizers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero text-center">
+      <div class="container">
+        <span class="badge-workshop">Joint Workshop</span>
+        <h1 class="hero-title">Human-Aware Cybersecurity and Risk Analysis in AI-Driven Systems</h1>
+        <p class="hero-subtitle">
+          HACKS-RAMS2026 is an interdisciplinary workshop on AI risk management, human–AI interaction,
+          and human-centered cybersecurity in adversarial and security-critical environments.
+          <br><br>
+          Held within <strong>ECML PKDD 2026</strong><br>
+          <span><strong>7–11 September 2026</strong> · Naples, Italy</span>
+        </p>
+
+        <div class="event-details">
+          <div class="detail-item">
+            <i class="bi bi-calendar-event"></i>
+            <span>7–11 September 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-7">
+            <div class="card-box">
+              <h2>About the workshop</h2>
+              <p class="lead">
+                Artificial Intelligence systems are increasingly integrated into everyday applications, digital
+                infrastructures,
+                and security-critical environments. While these systems offer significant benefits, they also introduce
+                systemic risks
+                related to technical vulnerabilities, algorithmic bias, integration issues in complex systems, and the
+                dynamics of
+                human–AI interaction.
+              </p>
+              <p>
+                The workshop is held within <strong>ECML PKDD 2026</strong> — the European Conference on Machine
+                Learning and Principles and Practice of Knowledge Discovery in Databases — taking place in
+                <strong>Naples, Italy, from 7 to 11 September 2026</strong>.
+              </p>
+              <p>
+                At the same time, modern cyber threats have shifted toward the cognitive domain, exploiting human
+                behavior,
+                social dynamics, and large-scale information ecosystems. Social cyber attacks such as phishing, social
+                engineering,
+                and disinformation campaigns manipulate trust mechanisms, cognitive biases, and online communication
+                patterns.
+              </p>
+              <p>
+                HACKS-RAMS2026 provides an interdisciplinary forum that brings together researchers and practitioners
+                from machine learning,
+                knowledge discovery, cybersecurity, and human-centered computing. The workshop aims to advance methods
+                for identifying,
+                modeling, and mitigating risks in AI-enabled socio-technical systems operating in adversarial and
+                human-critical environments.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="card-box">
+              <h3>Important dates</h3>
+              <div class="stats-grid mt-3">
+                <div class="stat-card">
+                  <div class="stat-icon"><i class="bi bi-calendar-event"></i></div>
+                  <h4>5 June 2026</h4>
+                  <p>Paper Submission</p>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon"><i class="bi bi-check2-circle"></i></div>
+                  <h4>1 July 2026</h4>
+                  <p>Paper Acceptance</p>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon"><i class="bi bi-file-earmark-check"></i></div>
+                  <h4>10 July 2026</h4>
+                  <p>Camera-ready Papers</p>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon"><i class="bi bi-clock-history"></i></div>
+                  <h4>Half-day event</h4>
+                  <p>Workshop format</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+          <div class="col-lg-6">
+            <div class="card-box">
+              <h3>Topics of interest</h3>
+              <ul class="topics-list">
+                <li>Risk identification and modeling in AI-driven systems and multi-component ecosystems.</li>
+                <li>Human–AI interaction risks, trust, overreliance, and decision-making under automation.</li>
+                <li>Human-centered cybersecurity and social cyber attacks, including phishing, social engineering, and
+                  disinformation.</li>
+                <li>Machine learning and knowledge discovery for cyber threat detection on large-scale heterogeneous
+                  data.</li>
+                <li>Natural language processing and large language models for malicious or manipulative content
+                  analysis.</li>
+                <li>Graph learning and knowledge graphs for social networks, communication patterns, and cyber threat
+                  ecosystems.</li>
+                <li>Bias, robustness, uncertainty, and adversarial machine learning in human-critical settings.</li>
+                <li>Explainable and trustworthy AI for security-critical applications.</li>
+                <li>Generative AI for both cyber attacks and defensive analysis.</li>
+                <li>Runtime monitoring, continual risk assessment, and adaptive mitigation strategies.</li>
+                <li>Human behavioral and psychophysiological data analysis.</li>
+                <li>Privacy, data protection, cyber threat intelligence, and knowledge sharing.</li>
+                <li>Human-in-the-loop and reasoning-based methods for dynamic risk assessment and explanation.</li>
+                <li>Case studies and empirical evaluations in real-world deployments.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-box">
+              <h3>Submission guidelines</h3>
+              <p>
+                Papers must be written in English and formatted in LaTeX following the Springer LNCS author kit.
+                The maximum length is <strong>16 pages including references</strong>. Over-length papers will be
+                rejected without review.
+              </p>
+              <p>
+                Up to 10 MB of additional material may be uploaded with the submission. Appendices should be submitted
+                separately,
+                and the main paper must remain self-contained within the page limit.
+              </p>
+              <p>
+                HACKS-RAMS2026 welcomes regular research papers, survey articles, mature work, recent research
+                contributions,
+                preliminary exploratory work, and industry experience or case-study papers. Submissions must be original
+                and not under review elsewhere.
+              </p>
+              <p>
+                All submissions should be made in PDF via Microsoft CMT and must adhere to the Springer LNCS style.
+                At least one author of each accepted paper must register and present the paper in person in Naples.
+              </p>
+              <p>
+                The workshop papers may be included in a joint post-workshop proceeding published by Springer
+                Communications in Computer and Information Science (CCIS), with authors able to opt in or out.
+              </p>
+              <p class="mb-0">
+                <strong>Submission link:</strong> TBD.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speakers" class="section light-background">
+      <div class="container">
+        <div class="section-title">
+          <h2>Invited Speakers</h2>
+          <p>TBD</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/GaetanoCimino.webp" alt="Gaetano Cimino" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Gaetano Cimino</h4><span class="speaker-position">Assistant Professor</span><span
+              class="speaker-org">University of Salerno, Italy</span><span class="speaker-email">gcimino@unisa.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/StefanoCirillo.png" alt="Stefano Cirillo" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Stefano Cirillo</h4><span class="speaker-position">Assistant Professor (Tenure Track)</span><span
+              class="speaker-org">University of Salerno, Italy</span><span
+              class="speaker-email">scirillo@unisa.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/MirianaCalvano.jpeg" alt="Miriana Calvano" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Miriana Calvano</h4><span class="speaker-position">PhD Student</span><span
+              class="speaker-org">University of Bari Aldo Moro, Italy</span><span
+              class="speaker-email">miriana.calvano@uniba.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/GiuseppeDesolda.jpg" alt="Giuseppe Desolda" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Giuseppe Desolda</h4><span class="speaker-position">Associate Professor</span><span
+              class="speaker-org">University of Bari Aldo Moro, Italy</span><span
+              class="speaker-email">giuseppe.desolda@uniba.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/IdioGuarino.jpeg" alt="Idio Guarino" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Idio Guarino</h4><span class="speaker-position">Assistant Professor</span><span
+              class="speaker-org">University of Bologna, Italy</span><span
+              class="speaker-email">idio.guarino@unibo.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/PantaleoneNespoli.jpeg" alt="Pantaleone Nespoli" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Pantaleone Nespoli</h4><span class="speaker-position">Postdoctoral Researcher</span><span
+              class="speaker-org">University of Murcia, Spain</span><span
+              class="speaker-email">pantaleone.nespoli@um.es</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/ElianaPastor.jpeg" alt="Eliana Pastor" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Eliana Pastor</h4><span class="speaker-position">Assistant Professor</span><span
+              class="speaker-org">Polytechnic University of Turin, Italy</span><span
+              class="speaker-email">eliana.pastor@polito.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/GaetanoPerrone.jpeg" alt="Gaetano Perrone" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Gaetano Perrone</h4><span class="speaker-position">Assistant Professor</span><span
+              class="speaker-org">University of Naples Federico II, Italy</span><span
+              class="speaker-email">gaetano.perrone@unina.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/RobertaPresta.jpeg" alt="Roberta Presta" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Roberta Presta</h4><span class="speaker-position">Assistant Professor</span><span
+              class="speaker-org">Università degli Studi Suor Orsola Benincasa, Napoli, Italy</span><span
+              class="speaker-email">roberta.presta@unisob.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/GiancarloSperlí.jpeg" alt="Giancarlo Sperlí" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Giancarlo Sperlí</h4><span class="speaker-position">Associate Professor</span><span
+              class="speaker-org">University of Naples Federico II, Italy</span><span
+              class="speaker-email">giancarlo.sperli@unina.it</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="speaker-profile text-center">
+          <img src="assets/img/SerenaTardelli.jpg" alt="Serena Tardelli" class="img-fluid rounded mb-3">
+          <div class="speaker-info">
+            <h4>Serena Tardelli</h4><span class="speaker-position">Researcher</span><span class="speaker-org">IIT-CNR,
+              Pisa, Italy</span><span class="speaker-email">serena.tardelli@iit.cnr.it</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title mt-5">
+      <h2>Program Committee</h2>
+    </div>
+    <div class="card-box">
+      <ul class="pc-list mb-0">
+        <li>Dr. Alessandro Pagano, Consiglio Nazionale delle Ricerche (CNR), Italy</li>
+        <li>Prof. Ana M. Bernardos, Universidad Politécnica de Madrid, Spain</li>
+        <li>Dr. Andrea Esposito, University of Bari Aldo Moro, Italy</li>
+        <li>Dr. Andrea Vignali, University of Naples Federico II, Italy</li>
+        <li>Dr. Antonio Curci, University of Bari Aldo Moro, Italy</li>
+        <li>Prof. Benjamin Negrevergne, PSL – Paris Dauphine, France</li>
+        <li>Dr. Basel Katt, Norwegian University of Science and Technology, Norway</li>
+        <li>Dr. Benedetta Tessa, University of Pisa, Italy</li>
+        <li>Prof. Carlotta Domeniconi, George Mason University, US</li>
+        <li>Prof. Christoph Heitz, Zurich University of Applied Sciences, Switzerland</li>
+        <li>Dr. Chuyuan Li, University of British Columbia, Canada</li>
+        <li>Prof. Constantinos Halkiopoulos, University of Patras</li>
+        <li>Prof. Daniel Leightley, University of California Berkeley</li>
+        <li>Dr. Daniel Orlando Díaz López, Universidad del Rosario, Spain</li>
+        <li>Prof. Dimitar Trajanov, Boston University</li>
+        <li>Prof. Ece Calikus, Uppsala University, Sweden</li>
+        <li>Prof. Elisa Bassignana, IT University of Copenhagen</li>
+        <li>Prof. Emmanouil Vasilomanolakis, Technical University of Denmark, Denmark</li>
+        <li>Dr. Flavio Cirillo, NEC Laboratories EU, Germany</li>
+        <li>Prof. Flavio Giobergia, Polytechnic University of Turin</li>
+        <li>Prof. Félix Gómez Mármol, University of Murcia, Spain</li>
+        <li>Dr. Francesco Cerasuolo, University of Naples Federico II, Italy</li>
+        <li>Prof. Gianluca Bonifazi, Marche Polytechnic University</li>
+        <li>Dr. Georgios Kambourakis, University of the Aegean, Greece</li>
+        <li>Prof. Gizem Gezici, Scuola Normale Superiore, Italy</li>
+        <li>Prof. Gregorio Martínez Pérez, University of Murcia, Spain</li>
+        <li>Prof. Haoran Xie, Lingnan University</li>
+        <li>Prof. Ibidun Christiana Obagbuwa, Walter Sisulu University</li>
+        <li>Prof. Izabela Rojek, Kazimierz Wielki University</li>
+        <li>Prof. Joaquín Garcia Alfaro, Telecom SudParis, France</li>
+        <li>Dr. Jose María Fuentes, Carlos II University of Madrid, Spain</li>
+        <li>Prof. Lip Yee Por, Universiti Malaya</li>
+        <li>Dr. Lorenzo Alvisi, IMT School for Advanced Studies Lucca, Italy</li>
+        <li>Prof. Luca Virgili, Marche Polytechnic University</li>
+        <li>Prof. Mamoona Humayun, Roehampton University</li>
+        <li>Prof. Manuel Gil Perez, University of Murcia, Spain</li>
+        <li>Dr. Marco Antonio Sotelo Monge, Indra, Spain</li>
+        <li>Prof. Maryline Laurent, Telecom SudParis, France</li>
+        <li>Dr. Martino Ciaperoni, Scuola Normale Superiore, Italy</li>
+        <li>Prof. Maurizio Atzori, University of Cagliari, Italy</li>
+        <li>Prof. Mina Tadros, University of Strathclyde</li>
+        <li>Dr. Mir Rayat Imtiaz Hossain, University of British Columbia, Canada</li>
+        <li>Prof. Mohammad Rashed Altimania, University of Tabuk</li>
+        <li>Prof. Mohammed I. Al-Rayif, King Saud University</li>
+        <li>Prof. Mohamed Siala, INSA Toulouse & LAAS-CNRS, France</li>
+        <li>Prof. Olga C. Santos, Universidad Nacional de Educación a Distancia (UNED)</li>
+        <li>Prof. Osvaldo Gervasi, University of Perugia</li>
+        <li>Dr. Roberto Bifulco, NEC Laboratories EU, Germany</li>
+        <li>Prof. Paolo Bottoni, Sapienza University Rome</li>
+        <li>Prof. Paulo Bruno Serafim, Gran Sasso Science Institute, Italy</li>
+        <li>Prof. Romain Vuillemot, École centrale de Lyon, France</li>
+        <li>Prof. Sajid Anwar, Institute of Management Sciences, Peshawar</li>
+        <li>Prof. Sara Colantonio, ISTI-CNR, Italy</li>
+        <li>Prof. Savvina Daniil, Centrum Wiskunde & Informatica (CWI), Netherlands</li>
+        <li>Prof. Shaina Raza, Vector Institute for Artificial Intelligence</li>
+        <li>Prof. Shweta Mahajan, York University, Canada</li>
+        <li>Prof. Vagelis Plevris, Qatar University</li>
+        <li>Dr. Virginia R. Coletta, Consiglio Nazionale delle Ricerche (CNR)</li>
+        <li>Prof. Weiwei Jiang, Beijing University of Posts and Telecommunications, China</li>
+        <li>Dr. Urko Lopez Odriozola, University of Mondragon, Spain</li>
+        <li>Prof. Zichong Wang, Florida International University, US</li>
+      </ul>
+    </div>
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">GLOW Workshop</strong> <span>All Rights Reserved</span>
+      </p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
