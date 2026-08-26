@@ -270,6 +270,104 @@
         padding-top: 160px;
       }
     }
+
+    /* Workshop Program */
+    .program-day {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .program-item {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    .program-time {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.05rem;
+      padding-top: 20px;
+      text-align: right;
+    }
+
+    .program-content {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+      border-left: 4px solid var(--accent);
+    }
+
+    .program-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+    }
+
+    .program-content h4 {
+      font-size: 1rem;
+      margin-top: 18px;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+
+    .program-content p {
+      margin-bottom: 4px;
+    }
+
+    .program-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .paper {
+      padding: 13px 0;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .paper:first-of-type {
+      margin-top: 10px;
+    }
+
+    .paper-title {
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .paper-authors {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .program-keynote .program-content {
+      border-left-color: #b7791f;
+      background: #fffbeb;
+    }
+
+    .program-break .program-content {
+      background: #f1f5f9;
+      border-left-color: #94a3b8;
+    }
+
+    .program-special .program-content {
+      background: #fef2f2;
+    }
+
+    @media (max-width: 767px) {
+      .program-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .program-time {
+        text-align: left;
+        padding-top: 0;
+      }
+    }
   </style>
 </head>
 
@@ -310,11 +408,425 @@
         <div class="event-details">
           <div class="detail-item">
             <i class="bi bi-calendar-event"></i>
-            <span>7–11 September 2026</span>
+            <span>11 September 2026</span>
           </div>
         </div>
       </div>
     </section>
+
+
+    <section id="schedule" class="section light-background">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Workshop Program</h2>
+        </div>
+
+        <div class="program-day">
+
+          <!-- Keynote -->
+          <div class="program-item program-keynote">
+            <div class="program-time">10:30–11:15</div>
+            <div class="program-content">
+              <h3><i class="bi bi-mic me-2"></i>Keynote</h3>
+              <div class="program-meta">
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Room II3
+              </div>
+
+              <h4>Beyond the Network: Understanding Cognitive Threats</h4>
+              <p><strong>Daniel Díaz-López</strong>, University of Murcia</p>
+            </div>
+          </div>
+
+
+          <!-- Session I -->
+          <div class="program-item">
+            <div class="program-time">11:15–12:30</div>
+            <div class="program-content">
+              <h3>Paper Presentations · Session I</h3>
+
+              <div class="program-meta">
+                <strong>Session Chair:</strong> Pantaleone Nespoli
+                <br>
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Room II3
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  SOFIA: A Unified Framework for Deepfake-Driven Terrorism and Hybrid Threats
+                </div>
+                <div class="paper-authors">
+                  Vita Santa Barletta, Danilo Caivano, Gabriel Cellammare,
+                  Pietro Chiedi, Antonio Piccinno
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Consensus-Driven Countermeasures: A Multi-Agent System Leveraging
+                  Open-Source Large Language Models to Mitigate Disinformation Threats
+                </div>
+                <div class="paper-authors">
+                  Sebastian Kula, Martin Tamajka
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Interaction Cyber-Ranges for Human–AI Companion Systems:
+                  Stress-Testing Trust-Relevant Behaviour under Degraded Semantic States
+                </div>
+                <div class="paper-authors">
+                  Roberta Presta, Lorenzo Bacchiani, Andrea Bedei, Mario Bravetti,
+                  Andrea Melis, Giovanni Pau, Roberto Girau
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Improving Fairness in Deepfake Detection via Redundancy-Based Undersampling
+                </div>
+                <div class="paper-authors">
+                  Yan Cunha, Daniel Moraes, Gabriel Prenassi, Guilherme Fonseca,
+                  Julio Cesar Duarte, Leonardo Rocha, Sérgio Colcher
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  RedTreez – A Dynamic Tree-based Multi-turn Red-Teaming Approach
+                </div>
+                <div class="paper-authors">
+                  Iago Paulo, João Magalhães, David Semedo
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  A Digital Twin to Improve Cyber-Social Impact
+                </div>
+                <div class="paper-authors">
+                  Vita Santa Barletta, Danilo Caivano, Gabriel Cellammare,
+                  Andrea Dimauro, Pasquale Mesagna, Massimiliano Morga
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Session II -->
+          <div class="program-item">
+            <div class="program-time">12:30–13:30</div>
+            <div class="program-content">
+              <h3>Paper Presentations · Session II</h3>
+
+              <div class="program-meta">
+                <strong>Session Chair:</strong> Stefano Cirillo
+                <br>
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Room II3
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  A Zero-Shot Evaluation of Large Language Models for Detecting
+                  Algorithmically Generated Domains
+                </div>
+                <div class="paper-authors">
+                  Donato D'Ambrosio, Francesco Cerasuolo, Alfredo Nascita,
+                  Antonio Montieri, Antonio Pescapè
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Trend-based Multi-Modal Anomaly and Cyber Threat Detection with
+                  Traceable Explainability for Cloud Services
+                </div>
+                <div class="paper-authors">
+                  Mert Nakip, Rafał Gibała, Anna Grygar, Sławomir Nowak
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  When the Analyst Scans for the Attacker:
+                  Subverting Agentic LLM Security Operations in OT Networks
+                </div>
+                <div class="paper-authors">
+                  Jaafer Rahmani, Eren Çil, Axel Sikora
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Security-Aware RF Manifold Learning:
+                  Anomaly Detection in 6G Networks via Contrastive CSI Representations
+                </div>
+                <div class="paper-authors">
+                  Andrea Piroddi, Andrea Melis, Alessandro Martini, Roberto Girau
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Preventing Data Exfiltration at the Enterprise AI Boundary:
+                  A Progressive Guardrail Architecture
+                </div>
+                <div class="paper-authors">
+                  Thomas Schuster, Marian Lambert, Nico Doering
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Lunch -->
+          <div class="program-item program-break">
+            <div class="program-time">13:30–14:30</div>
+            <div class="program-content">
+              <h3><i class="bi bi-cup-hot me-2"></i>Lunch Break</h3>
+              <div class="program-meta mb-0">
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Level -1
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Session III -->
+          <div class="program-item">
+            <div class="program-time">14:30–16:00</div>
+            <div class="program-content">
+              <h3>Paper Presentations · Session III</h3>
+
+              <div class="program-meta">
+                <strong>Session Chair:</strong> Roberta Presta
+                <br>
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Room II3
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Human-Centred Risk Mitigation for AI-Mediated Information Manipulation:
+                  A SOCMINT Framework Based on Information Manipulation Sets
+                </div>
+                <div class="paper-authors">
+                  Antonio Scala
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  From Manipulation to Security-Relevant Action:
+                  Human Exposure in AI-Mediated Cyber Risk
+                </div>
+                <div class="paper-authors">
+                  Luigi Di Biasi, Francesca Formisano, Giuseppe Genito,
+                  Francesco De Micco, Gennaro Sepe, Lorenzo Di Palo, Serena Lembo
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Should LLM Agents Decide in Social Simulations?
+                  Comparing Finite-State and LLM-Based Decision Policies
+                </div>
+                <div class="paper-authors">
+                  Alejandro Buitrago López, Javier Pastor-Galindo,
+                  José Antonio Ruipérez-Valiente
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  The FRIAct Framework: Addressing the Methodological Gap
+                  Concerning Fundamental Rights Impact Assessment
+                </div>
+                <div class="paper-authors">
+                  Eylül Erva Akin, Nicole Inverardi, Ilaria Penco,
+                  Daniele Scelta, Silvia Tessaro Trapani, Manuela Zaidan
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Towards a Methodology for Calibrating Human-in-the-Loop Trust in Clinical AI
+                  Using Standardized Reason Codes and Adaptive Breach Thresholds
+                </div>
+                <div class="paper-authors">
+                  Luana Alvarenga, André Moreira, Caio Justino, Igor Fernandes,
+                  Luana Oliveira, Anna Araújo, Marcos Farias, Bruno Nunes,
+                  Leandro Rodrigues, André Peres, Renan Moioli, César Rennó-Costa
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning
+                </div>
+                <div class="paper-authors">
+                  Łukasz Sobczak, Nur Keleşoğlu, Sławomir Nowak
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  GAIMP: Clinical Text Sanitization via Agent-Based Generative Anonymization
+                </div>
+                <div class="paper-authors">
+                  Maurizio Atzori, Stefano Cirillo, Alessandro Pani,
+                  Giuseppe Polese, Giandomenico Solimando
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Coffee -->
+          <div class="program-item program-break">
+            <div class="program-time">16:00–16:30</div>
+            <div class="program-content">
+              <h3><i class="bi bi-cup-hot me-2"></i>Coffee Break</h3>
+              <div class="program-meta mb-0">
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Level -1
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Session IV -->
+          <div class="program-item">
+            <div class="program-time">16:30–18:10</div>
+            <div class="program-content">
+              <h3>Paper Presentations · Session IV</h3>
+
+              <div class="program-meta">
+                <strong>Session Chair:</strong> Eliana Pastor
+                <br>
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Room II3
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Inspecting Training Dynamics of Similarity Development
+                  in Supervised Vision Networks
+                </div>
+                <div class="paper-authors">
+                  Katarzyna Filus, Mateusz Żarski
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  When In-Distribution Is Not In-Scope:
+                  Empirical Evidence for Out-of-Model-Scope Failures
+                </div>
+                <div class="paper-authors">
+                  Raul Ferreira, Leandor Alvim
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Agentic Adversarial Debiasing:
+                  A Dynamic Multi-Agent Framework for Fairness-Aware Machine Learning
+                </div>
+                <div class="paper-authors">
+                  Wassim Fathallah, Nahla Ben Amor
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Ghost Echoes: Semantic Erasure Failure in Retrieval-Backed Applications
+                </div>
+                <div class="paper-authors">
+                  Allan Mukkuzhi, Jacob Kammerzell, Noella Uwayisenga,
+                  Yeabsira Bizualem, Chandranil Chakraborttii
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Self-hosted LLMs for Phishing Detection:
+                  An Empirical Evaluation of Accuracy and Efficiency
+                </div>
+                <div class="paper-authors">
+                  Aleksandra Rząca, Wojciech Matuszyński, Kamil Faber, Łukasz Faber
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  A Novel AI-Assisted Knowledge Discovery Service
+                  to Support Drug-Manufacturing Hypotheses
+                </div>
+                <div class="paper-authors">
+                  Federico Negri, Vito Morreale, Ernesto La Mattina,
+                  Marialuna De Tommaso, Valentina Mazzonello
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Mind the Gap: Robustness Risks in PII Detection Systems
+                </div>
+                <div class="paper-authors">
+                  Adeel Zafar, Sławomir Nowaczyk
+                </div>
+              </div>
+
+              <div class="paper">
+                <div class="paper-title">
+                  Affective Asymmetry in News Reactions across Reddit and Bluesky
+                </div>
+                <div class="paper-authors">
+                  Mario Trerotola, Anna Esposito, Mimmo Parente
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Round Table -->
+          <div class="program-item program-special">
+            <div class="program-time">18:10–18:40</div>
+            <div class="program-content">
+              <h3><i class="bi bi-people me-2"></i>Round Table</h3>
+              <div class="program-meta mb-0">
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Room II3
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Closing -->
+          <div class="program-item program-special">
+            <div class="program-time">18:40–19:00</div>
+            <div class="program-content">
+              <h3><i class="bi bi-flag me-2"></i>Conclusion &amp; Remarks</h3>
+              <div class="program-meta mb-0">
+                <i class="bi bi-geo-alt"></i>
+                Building 1, Via Claudio, Room II3
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
 
     <section id="about" class="section">
       <div class="container">
@@ -371,11 +883,12 @@
                   <h4>8 July 2026</h4>
                   <p>Paper Acceptance</p>
                 </div>
-                <div class="stat-card">
+                <!--
+                  <div class="stat-card">
                   <div class="stat-icon"><i class="bi bi-file-earmark-check"></i></div>
                   <h4>TBD</h4>
                   <p>Camera-ready Papers</p>
-                </div>
+                </div> --->
                 <div class="stat-card">
                   <div class="stat-icon"><i class="bi bi-clock-history"></i></div>
                   <h4>Full-day event</h4>
@@ -464,187 +977,189 @@
       </div>
     </section>
 
-    <section id="speakers" class="section light-background">
+
+
+
+
+    <section id="organizers" class="section">
       <div class="container">
         <div class="section-title">
-          <h2>Keynote Speakers</h2>
-          <p>Dr. Daniel Orlando Diaz López</p>
+          <h2>Workshop Organizers</h2>
         </div>
-      </div>
-    </section>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/GaetanoCimino.jpeg" alt="Gaetano Cimino" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Gaetano Cimino</h4><span class="speaker-position">Assistant Professor</span><span
+                  class="speaker-org">University of Salerno, Italy</span><span
+                  class="speaker-email">gcimino@unisa.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/StefanoCirillo.png" alt="Stefano Cirillo" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Stefano Cirillo</h4><span class="speaker-position">Assistant Professor (Tenure Track)</span><span
+                  class="speaker-org">University of Salerno, Italy</span><span
+                  class="speaker-email">scirillo@unisa.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/MirianaCalvano.jpeg" alt="Miriana Calvano" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Miriana Calvano</h4><span class="speaker-position">PhD Student</span><span
+                  class="speaker-org">University of Bari Aldo Moro, Italy</span><span
+                  class="speaker-email">miriana.calvano@uniba.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/GiuseppeDesolda.jpg" alt="Giuseppe Desolda" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Giuseppe Desolda</h4><span class="speaker-position">Associate Professor</span><span
+                  class="speaker-org">University of Bari Aldo Moro, Italy</span><span
+                  class="speaker-email">giuseppe.desolda@uniba.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/IdioGuarino.jpeg" alt="Idio Guarino" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Idio Guarino</h4><span class="speaker-position">Assistant Professor</span><span
+                  class="speaker-org">University of Bologna, Italy</span><span
+                  class="speaker-email">idio.guarino@unibo.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/PantaleoneNespoli.jpeg" alt="Pantaleone Nespoli" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Pantaleone Nespoli</h4><span class="speaker-position">Postdoctoral Researcher</span><span
+                  class="speaker-org">University of Murcia, Spain</span><span
+                  class="speaker-email">pantaleone.nespoli@um.es</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/ElianaPastor.jpeg" alt="Eliana Pastor" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Eliana Pastor</h4><span class="speaker-position">Assistant Professor</span><span
+                  class="speaker-org">Polytechnic University of Turin, Italy</span><span
+                  class="speaker-email">eliana.pastor@polito.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/GaetanoPerrone.jpeg" alt="Gaetano Perrone" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Gaetano Perrone</h4><span class="speaker-position">Assistant Professor</span><span
+                  class="speaker-org">University of Naples Federico II, Italy</span><span
+                  class="speaker-email">gaetano.perrone@unina.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/RobertaPresta.jpeg" alt="Roberta Presta" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Roberta Presta</h4><span class="speaker-position">Assistant Professor</span><span
+                  class="speaker-org">Università degli Studi Suor Orsola Benincasa, Napoli, Italy</span><span
+                  class="speaker-email">roberta.presta@unisob.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/GiancarloSperlí.jpeg" alt="Giancarlo Sperlí" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Giancarlo Sperlí</h4><span class="speaker-position">Associate Professor</span><span
+                  class="speaker-org">University of Naples Federico II, Italy</span><span
+                  class="speaker-email">giancarlo.sperli@unina.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="speaker-profile text-center">
+              <img src="assets/img/SerenaTardelli.jpg" alt="Serena Tardelli" class="img-fluid rounded mb-3">
+              <div class="speaker-info">
+                <h4>Serena Tardelli</h4><span class="speaker-position">Researcher</span><span
+                  class="speaker-org">IIT-CNR,
+                  Pisa, Italy</span><span class="speaker-email">serena.tardelli@iit.cnr.it</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/GaetanoCimino.jpeg" alt="Gaetano Cimino" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Gaetano Cimino</h4><span class="speaker-position">Assistant Professor</span><span
-              class="speaker-org">University of Salerno, Italy</span><span class="speaker-email">gcimino@unisa.it</span>
-          </div>
+        <div class="section-title mt-5">
+          <h2>Program Committee</h2>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/StefanoCirillo.png" alt="Stefano Cirillo" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Stefano Cirillo</h4><span class="speaker-position">Assistant Professor (Tenure Track)</span><span
-              class="speaker-org">University of Salerno, Italy</span><span
-              class="speaker-email">scirillo@unisa.it</span>
-          </div>
+        <div class="card-box">
+          <ul class="pc-list mb-0">
+            <li>Alessia Antelmi, University of Turin, Italy</li>
+            <li>Alfredo Nascita, University of Napoli Federico II, Italy</li>
+            <li>Amirhossein Abaskohi, University of British Columbia, Canada</li>
+            <li>Andrea Esposito, University of Bari Aldo Moro, Italy</li>
+            <li>Andrea Selice, University of Salerno, Italy</li>
+            <li>Andrea Vignali, University of Naples Federico II, Italy</li>
+            <li>Antonio Curci, University of Bari Aldo Moro, Italy</li>
+            <li>Benedetta Tessa, University of Pisa, Italy</li>
+            <li>Cesare Tucci, University of Bari, Italy</li>
+            <li>Chiara Tancredi, Suor Orsola Benincasa University, Italy</li>
+            <li>Christopher Buratti, Università Politecnica delle Marche, Italy</li>
+            <li>Daniel Diaz, University of Murcia, Spain</li>
+            <li>Davide Traini, Unimore, Italy</li>
+            <li>Domenico Desiato, University of Bari Aldo Moro, Italy</li>
+            <li>Eleonora Poeta, Politecnico di Torino, Italy</li>
+            <li>Enrique Tomás Martínez Beltrán, University of Murcia, Spain</li>
+            <li>Federica Parlapiano, Università Politecnica delle Marche, Italy</li>
+            <li>Flavia De Simone, Università Suor Orsola Benincasa, Napoli, Italy</li>
+            <li>Francesco Greco, University of Bari, Italy</li>
+            <li>Giampaolo Bovenzi, Pegaso Telematic University, Italy</li>
+            <li>Giancarlo Sperlì, University of Naples Federico II, Italy</li>
+            <li>Giandomenico Solimando, University of Salerno, Italy</li>
+            <li>Gianluca Bonifazi, Università Politecnica delle Marche, Italy</li>
+            <li>Gianpaolo Iuliano, Centre National de la Recherche Scientifique CNRS, France</li>
+            <li>Giovanni Stanco, UNINA, Italy</li>
+            <li>Giulia Quaglieri, Università Politecnica delle Marche, Italy</li>
+            <li>Gizem Gezici, Scuola Normale Superiore, Italy</li>
+            <li>Idio Guarino, University of Bologna, Italy</li>
+            <li>Jose Maria De Fuentes, Universidad Carlos III de Madrid, Spain</li>
+            <li>Laura DE SANTIS, Università degli Studi di Salerno, Italy</li>
+            <li>Lorenzo Alvisi, IMT Lucca-CNR Pisa, Italy</li>
+            <li>Lorenzo Mannocci, University of Pisa, Italy</li>
+            <li>Luca Virgili, Università Politecnica delle Marche, Italy</li>
+            <li>Luigi Di Biasi, University of Salerno, Italy</li>
+            <li>Mafalda Ingenito, University of Salerno, Italy</li>
+            <li>Manuel Gil, University of Murcia, Spain</li>
+            <li>Marco Cominelli, Politecnico di Milano, Italy</li>
+            <li>Mariano Albaladejo González, University of Murcia, Spain</li>
+            <li>Mario Quiles Perez, University of Murcia, Spain</li>
+            <li>Mario Varlese, Federico II, Italy</li>
+            <li>Martino Ciaperoni, Scuola Normale Superiore, Italy</li>
+            <li>Matteo Mantovani, University of Verona, Italy</li>
+            <li>Mir Rayat Imtiaz Hossain, University of British Columbia, Canada</li>
+            <li>Mohamed Siala, LAAS-CNRS, France</li>
+            <li>Nicola Bena, Università degli Studi di Milano, Italy</li>
+            <li>Nicolò Romandini, University of Bologna, Italy</li>
+            <li>Paulo Serafim, Gran Sasso Science Institute, Italy</li>
+            <li>Pedro Beltrán-López, University of Murcia, Spain</li>
+            <li>Roberto Stanzione, Inria, France</li>
+            <li>Saikat Mondal, IIT Jodhpur, India</li>
+            <li>Stefania Zinno, University of Naples Federico II, Italy</li>
+            <li>Vagelis Plevris, Qatar University, Qatar</li>
+            <li>Vita Santa Barletta, University of Bari Aldo Moro, Italy</li>
+            <li>Weiwei Jiang, Beijing University of Posts and Telecommunications, China</li>
+          </ul>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/MirianaCalvano.jpeg" alt="Miriana Calvano" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Miriana Calvano</h4><span class="speaker-position">PhD Student</span><span
-              class="speaker-org">University of Bari Aldo Moro, Italy</span><span
-              class="speaker-email">miriana.calvano@uniba.it</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/GiuseppeDesolda.jpg" alt="Giuseppe Desolda" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Giuseppe Desolda</h4><span class="speaker-position">Associate Professor</span><span
-              class="speaker-org">University of Bari Aldo Moro, Italy</span><span
-              class="speaker-email">giuseppe.desolda@uniba.it</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/IdioGuarino.jpeg" alt="Idio Guarino" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Idio Guarino</h4><span class="speaker-position">Assistant Professor</span><span
-              class="speaker-org">University of Bologna, Italy</span><span
-              class="speaker-email">idio.guarino@unibo.it</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/PantaleoneNespoli.jpeg" alt="Pantaleone Nespoli" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Pantaleone Nespoli</h4><span class="speaker-position">Postdoctoral Researcher</span><span
-              class="speaker-org">University of Murcia, Spain</span><span
-              class="speaker-email">pantaleone.nespoli@um.es</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/ElianaPastor.jpeg" alt="Eliana Pastor" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Eliana Pastor</h4><span class="speaker-position">Assistant Professor</span><span
-              class="speaker-org">Polytechnic University of Turin, Italy</span><span
-              class="speaker-email">eliana.pastor@polito.it</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/GaetanoPerrone.jpeg" alt="Gaetano Perrone" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Gaetano Perrone</h4><span class="speaker-position">Assistant Professor</span><span
-              class="speaker-org">University of Naples Federico II, Italy</span><span
-              class="speaker-email">gaetano.perrone@unina.it</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/RobertaPresta.jpeg" alt="Roberta Presta" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Roberta Presta</h4><span class="speaker-position">Assistant Professor</span><span
-              class="speaker-org">Università degli Studi Suor Orsola Benincasa, Napoli, Italy</span><span
-              class="speaker-email">roberta.presta@unisob.it</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/GiancarloSperlí.jpeg" alt="Giancarlo Sperlí" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Giancarlo Sperlí</h4><span class="speaker-position">Associate Professor</span><span
-              class="speaker-org">University of Naples Federico II, Italy</span><span
-              class="speaker-email">giancarlo.sperli@unina.it</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="speaker-profile text-center">
-          <img src="assets/img/SerenaTardelli.jpg" alt="Serena Tardelli" class="img-fluid rounded mb-3">
-          <div class="speaker-info">
-            <h4>Serena Tardelli</h4><span class="speaker-position">Researcher</span><span class="speaker-org">IIT-CNR,
-              Pisa, Italy</span><span class="speaker-email">serena.tardelli@iit.cnr.it</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-title mt-5">
-      <h2>Program Committee</h2>
-    </div>
-    <div class="card-box">
-      <ul class="pc-list mb-0">
-        <li>Alessia Antelmi, University of Turin, Italy</li>
-        <li>Alfredo Nascita, University of Napoli Federico II, Italy</li>
-        <li>Amirhossein Abaskohi, University of British Columbia, Canada</li>
-        <li>Andrea Esposito, University of Bari Aldo Moro, Italy</li>
-        <li>Andrea Selice, University of Salerno, Italy</li>
-        <li>Andrea Vignali, University of Naples Federico II, Italy</li>
-        <li>Antonio Curci, University of Bari Aldo Moro, Italy</li>
-        <li>Benedetta Tessa, University of Pisa, Italy</li>
-        <li>Cesare Tucci, University of Bari, Italy</li>
-        <li>Chiara Tancredi, Suor Orsola Benincasa University, Italy</li>
-        <li>Christopher Buratti, Università Politecnica delle Marche, Italy</li>
-        <li>Daniel Diaz, University of Murcia, Spain</li>
-        <li>Davide Traini, Unimore, Italy</li>
-        <li>Domenico Desiato, University of Bari Aldo Moro, Italy</li>
-        <li>Eleonora Poeta, Politecnico di Torino, Italy</li>
-        <li>Enrique Tomás Martínez Beltrán, University of Murcia, Spain</li>
-        <li>Federica Parlapiano, Università Politecnica delle Marche, Italy</li>
-        <li>Flavia De Simone, Università Suor Orsola Benincasa, Napoli, Italy</li>
-        <li>Francesco Greco, University of Bari, Italy</li>
-        <li>Giampaolo Bovenzi, Pegaso Telematic University, Italy</li>
-        <li>Giancarlo Sperlì, University of Naples Federico II, Italy</li>
-        <li>Giandomenico Solimando, University of Salerno, Italy</li>
-        <li>Gianluca Bonifazi, Università Politecnica delle Marche, Italy</li>
-        <li>Gianpaolo Iuliano, Centre National de la Recherche Scientifique CNRS, France</li>
-        <li>Giovanni Stanco, UNINA, Italy</li>
-        <li>Giulia Quaglieri, Università Politecnica delle Marche, Italy</li>
-        <li>Gizem Gezici, Scuola Normale Superiore, Italy</li>
-        <li>Idio Guarino, University of Bologna, Italy</li>
-        <li>Jose Maria De Fuentes, Universidad Carlos III de Madrid, Spain</li>
-        <li>Laura DE SANTIS, Università degli Studi di Salerno, Italy</li>
-        <li>Lorenzo Alvisi, IMT Lucca-CNR Pisa, Italy</li>
-        <li>Lorenzo Mannocci, University of Pisa, Italy</li>
-        <li>Luca Virgili, Università Politecnica delle Marche, Italy</li>
-        <li>Luigi Di Biasi, University of Salerno, Italy</li>
-        <li>Mafalda Ingenito, University of Salerno, Italy</li>
-        <li>Manuel Gil, University of Murcia, Spain</li>
-        <li>Marco Cominelli, Politecnico di Milano, Italy</li>
-        <li>Mariano Albaladejo González, University of Murcia, Spain</li>
-        <li>Mario Quiles Perez, University of Murcia, Spain</li>
-        <li>Mario Varlese, Federico II, Italy</li>
-        <li>Martino Ciaperoni, Scuola Normale Superiore, Italy</li>
-        <li>Matteo Mantovani, University of Verona, Italy</li>
-        <li>Mir Rayat Imtiaz Hossain, University of British Columbia, Canada</li>
-        <li>Mohamed Siala, LAAS-CNRS, France</li>
-        <li>Nicola Bena, Università degli Studi di Milano, Italy</li>
-        <li>Nicolò Romandini, University of Bologna, Italy</li>
-        <li>Paulo Serafim, Gran Sasso Science Institute, Italy</li>
-        <li>Pedro Beltrán-López, University of Murcia, Spain</li>
-        <li>Roberto Stanzione, Inria, France</li>
-        <li>Saikat Mondal, IIT Jodhpur, India</li>
-        <li>Stefania Zinno, University of Naples Federico II, Italy</li>
-        <li>Vagelis Plevris, Qatar University, Qatar</li>
-        <li>Vita Santa Barletta, University of Bari Aldo Moro, Italy</li>
-        <li>Weiwei Jiang, Beijing University of Posts and Telecommunications, China</li>
-      </ul>
-    </div>
 
 
   </main>
